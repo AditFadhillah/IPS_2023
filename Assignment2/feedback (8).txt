@@ -1,0 +1,30 @@
+# Feedback
+
+Todo for resubmission:
+  - Fix task 2
+  - Fix task 4
+  
+General comments:
+Task 1:
+1a. ok
+1b. ok, there is no explicit sequence operator. 
+    (The dot should be removed)
+1c. ok
+2a. ok
+2b. ok
+2c. ok
+3a. Are you sure that that is what would happen?
+3b. Incorrect. Have you tried doing it?
+3c. Note that $1 is just the position of the let token.
+
+Task 2:
+Some valid variable names are parsed incorrectly.
+Fx. 'AZaz_09', 'x__0', 'x_0yy_z1' and 'x_'
+Incorrect precedence when parsing, for example '2+3*4'
+
+Task 3:
+ok.
+
+Task 4:
+Incorrect.
+Adding new arrows on the diagram does not make sense, the answer should be a new type.

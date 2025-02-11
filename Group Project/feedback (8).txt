@@ -1,0 +1,28 @@
+# Task 1 General Arithmetic
+
+For codegen of And/Or Why compile the constant expression of 0, instead of just making an instruction for it.
+For codegen of negation you make a zeroReg just by newReg. This seems to works for the tests but you should either argue why this new register is 0, this would probably need a good look into the risc-v and regalloc files, so that you with 100% certainty can say it is a 0. or perhaps the easier option you can make sure your code does not rely on such an assumption, by e.g. using the dedicated 0-register.
+Very good!
+
+# Task 2 SOAC's
+
+For codegen it seems like you make the same mistake in both scan and replicate, but not filter. The mistake is that in the loop when looping over elements you do not increase the addres of the array elements by 4 each iteration, which is not true for booleans. This also means that your code is not correct for booleans which you do not seem to test for. So here would have been some great new tests.
+Look at your own filter implementation to see how you should have done.
+Other than that Great!
+
+# Task 3 Optimisations
+
+For copyConstPropFold, the let-let case is not correct, since you newer do the swap, you just optmise each expression by them selves and put it all back together, which would also be done in the last case anyway. Instead you should have, as the comment shows restructured the let-expression so we would end up with not having let expression inside the declaration, at least not directly. If you look at some of the optimised code e.g. from inline_map you can see that it is not optimised in the sense where the let-statement in the declaration is removed.
+This also means that is not here the overshadowing is happening, and therefore you should have looked at your failed tests and figured out why it failed, furthermore while implementing correct handling of shadowing was not mandatory, you can not just say because that the name has shadowing in it, then it is ok to fail, you should ensure that it does indeed fail because of the incorrect handling of shadowing. And then it would be fine that it fails.
+For times and "and" some of the optimisations are not completely safe, since if they happen to include IO you might be cutting these calls out, this is something you should discuss in the report, for why or why not you might have chosen some optmisations and not others.
+DBE and the rest of copyConstPropFold looks great
+
+# Testing
+
+As mentioned earlier you could have made some more test cases for soacs so you might have cought your mistake. Also for the optimisations it is a good idea to write about how you did (or should have) looked at the code output of some tests to ensure that the optimisations did optimise what it should.
+
+# Overall/General
+
+In general a very good report, you described what you have done very well.
+A couple of mistakes in the code.
+If you wanted to improve the report you could in some places mostly for optimisations and soacs consider how good your implementations are and if there are other possibilities, and how does possibilities would compare to your solution.

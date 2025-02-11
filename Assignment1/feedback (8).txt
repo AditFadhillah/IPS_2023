@@ -1,0 +1,23 @@
+# Overall
+
+Todo for resubmission:
+  - Fix max/argmax in calculator.fsx (result and error reporting)
+  - Fix error reporting in task 3
+
+# Task 1
+
+Ok.
+
+# Task 2
+
+Your max/argmax returns wrong results when e3 is negative.
+For example '(arg)max x=1 to 10 of 0-x' should give -1/(1).
+It should also give an error when the upper bound is less than the lower bound.
+
+Note that the ranges can be solved in a purely functional way while maintaining
+the efficiency of the impure approach using tail-recursion. 
+In IPS it is preferred (but not required in this case) for you to use F# in a funcional manner.
+
+# Task 3
+
+Your code gives a slightly incorrect error on wrong input. (The 0)

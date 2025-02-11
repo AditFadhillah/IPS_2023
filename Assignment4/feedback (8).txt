@@ -1,0 +1,26 @@
+# Feedback
+
+Todo for resubmission:
+  - Finish task 2
+  - Fix task 3
+  - Fix task 4
+
+General comments:
+
+Task 1:
+Correct.
+
+Task 2:
+c. There is only interference when the kill-set is non-empty.
+f. You are missing the code after spilling.
+
+Task 3:
+Minor swap-up between the transitions from 3 and 4.
+There should be a few more (2) states when constructing 'a*b'.
+
+Task 4:
+The epsilon-closures are too big. 
+In general any of final states do not represent more than 4 original states.
+
+This does not cause an issue in the final DFA, however there should be an a-transition in s4.
+(The final set should not be empty)

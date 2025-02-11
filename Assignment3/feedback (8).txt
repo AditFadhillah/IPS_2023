@@ -1,0 +1,23 @@
+# Feedback
+
+Todo for resubmission:
+  - Fix task 1
+  - Fix task 2
+  - Fix task 3
+  
+General comments:
+
+Task 1:
+You can use v0 and v1 as registers directly.
+Try to follow the translation table exactly, as you are taking a lot of shortcuts.
+
+Also make sure to follow the translation table for the machine code section.
+
+Task 2:
+Consider reversing the order of rules in the table, as the first rule overshadows the last two.
+The second rule has some issues when rz is any value other than 0 and 1 (they should become 0 as well).
+rz and rw both have the wrong result in the third rule (both are opposite of what they should be).
+
+Task 3:
+a. You are allocating too much memory (each element is a single byte)
+b. Refer to the assignent text how to write the call to another function for this assignment.
